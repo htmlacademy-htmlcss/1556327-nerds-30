@@ -19,7 +19,7 @@
       <ul class="cite-navigation">
         <li>
           <a href="#">Студия</a>
-          <!--Нужны ли стили для ссылок?-->
+          <!--Нужны ли отдельные стили для ссылок?-->
         </li>
         <li>
           <a href="blank.html">Клиенты</a>
@@ -155,29 +155,28 @@
       <h2>Давайте Дружить, это выгодно!</h2>
       <p>Скидка 10% для друзей из социальных сетей.</p>
       <ul>
-        <li>
+        <li class="social-button">
           <!--3 декоративных иконки.-->
-          <a class="social-button" href="#">Наша страница Вконтакте</a>
+          <a  href="#">Наша страница Вконтакте</a>
         </li>
-        <li>
-          <a class="social-button" href="#">Наша страница в Фейсбук</a>
+        <li class="social-button">
+          <a href="#">Наша страница в Фейсбук</a>
         </li>
-        <li>
-          <a class="social-button" href="#">Наш профиль в Инстаграм</a>
+        <li class="social-button">
+          <a  href="#">Наш профиль в Инстаграм</a>
         </li>
       </ul>
     </section>
   </footer>
   <section class="feedback-modal">
-    <h2>Форма обратной связи</h2>
-    <!--Если все инпуты в форме одинаковые,можно оставить один класс на форме или размечать каждый инпут?-->
+    <h2>Форма обратной связи</h2>    
     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="POST">
       <label for="name">Ваше имя:</label>
-      <input id="name" type="text" name="name" placeholder="Имя Фамилия">
+      <input class="feedback-form-name" id="name" type="text" name="name" placeholder="Имя Фамилия">
       <label for="e-mail">Ваш e-mail:</label>
-      <input id="e-mail" type="email" name="e-mail" placeholder="email@example.com">
+      <input class="feedback-form-email" id="e-mail" type="email" name="e-mail" placeholder="email@example.com">
       <label for="letter">Текст письма:</label>
-      <textarea id="letter" name="letter" placeholder="В свободной форме"></textarea>
+      <textarea class="feedback-form-text" id="letter" name="letter" placeholder="В свободной форме"></textarea>
       <button class="btn feedback-btn" type="submit">Отправить</button>
     </form>
     <button class="btn feedback-close" type="button">Закрыть</button>
