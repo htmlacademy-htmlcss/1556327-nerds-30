@@ -1,0 +1,31 @@
+:root {
+    --basic-black: #000000;
+    --basic-white: #ffffff;
+    --background: #888888;
+    --accent-color: #FB565A;
+    --acсent-color-hover: #E74246;
+    --accent-color-active: #D7373B;
+    --green: #00CA74;;
+    --green-hover: #00BC6C;
+    --green-active: #00AA62;
+    --yellow: #EFC849;
+    --yellow-hover: #EAB534;
+    --yellow-active: #E5A722;
+    --grey: #EEEEEE;
+    --grey-hover: #DFDFDF;
+    --grey-active: #D5D5D5;
+    --dark-grey: #283136;
+    --light-grey: #444444; 
+  }
+
+  body {
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
