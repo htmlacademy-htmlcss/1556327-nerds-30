@@ -22,7 +22,7 @@
     background-color: var(--basic-white);
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif, Arial;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -40,33 +40,50 @@
   .main-header {
     background-color: var(--grey);
     text-transform: uppercase;
-    font-family: "Roboto" sans-serif;
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 30px;
   }
 
   .main-navigation {
-
+  
   }
 
   .site-nav {
     list-style: none;
   }
 
-  .site-nav a:hover {
+  .site-nav a,
+  .site-nav-cart {
+    text-decoration: none;
+    color: black;
+  }
+
+  .site-nav a:hover,
+  .site-nav-cart:hover {
     color: var(--accent-color);
   }
 
-  .site-nav a:active {
+  .site-nav a:active,
+  .site-nav-cart:active {
+    color: black;
     opacity: 30%;
   }
   
-  .site-nav-cart {
-
+ /* .site-nav-cart {
+    text-decoration: none;
+    color: black;
   }
+  */
+  /*.site-nav-cart:hover {
+    color: var(--accent-color);
+  }
+  */
 
+ /* .site-nav-cart:active {
+    opacity: 30%;
+  }
+*/
   .logo:hover {
     opacity: 70%;
   }
@@ -74,12 +91,16 @@
   .logo:active {
     opacity: 30%;
   }
+/*Как правильно спрятать заголовок,чтобы он не отображался белой полосой в браузере?*/
+
+  .container h1 {
+    visibility: hidden;
+  }
 
 /*Carousel*/
 
 .carousel {
   background-color: var(--grey);
-
 }
 
 .carousel-nav {
@@ -87,7 +108,11 @@
 }
 
 .carousel-btn {
-  
+  border-radius: 50%;
+  border: 1px solid var(--basic-white);
+  background-color: var(--basic-white);
+  width: 18px;
+  height: 18px;
 }
 
 .slide-head {
@@ -97,12 +122,12 @@
 }
 
 .slide-text {
-  font-weight: normal;
   font-size: 16px;
   line-height: 24px;
 }
-
+/*Не понимаю,откуда брать значение padding,для отступов текста от края кнопки?Или это вообще другое свойство?*/
 .slide-btn {
+  border: 1px solid var(--accent-color);
   background-color: var(--accent-color);
   color: var(--basic-white);
   width: 240px;
@@ -111,35 +136,49 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  padding: 10px;
 }
 
 .slide-01 {
-background-image: url(../img/slide/slide-1.png);
-background-repeat: no-repeat;
-background-position: 50% 0;
+  background-image: url(../img/slide/slide-1.png);
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  width: 760px;
+  height: 431px;
+  left: 537px;
+  top: 114px;
 }
 
 .slide-02 {
   background-image: url(../img/slide/slide-2.png);
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 50% 50%;
+  width: 760px;
+  height: 431px;
+  left: 537px;
+  top: 114px;
 
 }
 
 .slide-03 {
 background-image: url(../img/slide/slide-3.png);
 background-repeat: no-repeat;
-background-position: 50% 0;
+background-position: 50% 50%;
+width: 760px;
+height: 431px;
+left: 537px;
+top: 114px;
 }
 
 .btn {
   background-color: var(--accent-color);
   border-radius: 3px;
   color: var(--basic-white);
+  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  width: 160px;
-  height: 50px;
+  text-decoration: none;
+  border: 5px solid var(--accent-color);
 }
 
 /*Products*/
@@ -276,7 +315,7 @@ opacity: 10%;
   text-transform: uppercase;
   }
 
-.footer-contacts {
+.footer-contacts p{
   font-size: 16px;
   line-height: 18px;
   font-weight: normal;
@@ -294,6 +333,7 @@ list-style: none;
 .social-button {
   background-color: ;
   background-color: var(--grey);
+  background-position: center;
   border-radius: 50%;
   width: 81px;
   height: 81px;
