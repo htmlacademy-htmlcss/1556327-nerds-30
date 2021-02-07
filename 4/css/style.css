@@ -22,7 +22,7 @@
     background-color: var(--basic-white);
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif, Arial;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -40,46 +40,54 @@
   .main-header {
     background-color: var(--grey);
     text-transform: uppercase;
-    font-family: "Roboto" sans-serif;
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 30px;
   }
 
   .main-navigation {
-
+  
   }
 
   .site-nav {
     list-style: none;
   }
 
-  .site-nav a:hover {
+  .site-nav a,
+  .site-nav-cart {
+    text-decoration: none;
+    color: black;
+  }
+
+  .site-nav a:hover,
+  .site-nav-cart:hover {
     color: var(--accent-color);
   }
 
-  .site-nav a:active {
+  .site-nav a:active,
+  .site-nav-cart:active {
+    color: black;
     opacity: 30%;
   }
   
-  .site-nav-cart {
-
-  }
-
   .logo:hover {
     opacity: 70%;
   }
-
+/*Почему этот селектор не работает, если его вставить к другим :active?*/
   .logo:active {
     opacity: 30%;
+  }
+/*Как правильно спрятать заголовок,чтобы он не отображался белой полосой в браузере?*/
+
+  .container h1,
+  .container h2 {
+    visibility: hidden;
   }
 
 /*Carousel*/
 
 .carousel {
   background-color: var(--grey);
-
 }
 
 .carousel-nav {
@@ -87,7 +95,16 @@
 }
 
 .carousel-btn {
-  
+  border-radius: 50%;
+  border: 1px solid var(--basic-white);
+  background-color: var(--basic-white);
+  width: 18px;
+  height: 18px;
+}
+
+/*Активная кнопка в карусели содержит в серединке еще один кружок,это сделать через обводку?*/
+.carousel-btn-active {
+
 }
 
 .slide-head {
@@ -97,12 +114,12 @@
 }
 
 .slide-text {
-  font-weight: normal;
   font-size: 16px;
   line-height: 24px;
 }
-
+/*Не понимаю,откуда брать значение padding,для отступов текста от края кнопки?Или это вообще другое свойство?*/
 .slide-btn {
+  border: 1px solid var(--accent-color);
   background-color: var(--accent-color);
   color: var(--basic-white);
   width: 240px;
@@ -111,35 +128,51 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  padding: 10px;
 }
 
+/*Как расположить картинку справа от текста? Пробовала 3мя значения b.position без толку*/
 .slide-01 {
-background-image: url(../img/slide/slide-1.png);
-background-repeat: no-repeat;
-background-position: 50% 0;
+  background-image: url(../img/slide/slide-1.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 760px;
+  height: 431px;
+  left: 537px;
+  top: 114px;
 }
 
 .slide-02 {
   background-image: url(../img/slide/slide-2.png);
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 200px 0px;
+  width: 760px;
+  height: 431px;
+  left: 537px;
+  top: 114px;
 
 }
 
 .slide-03 {
 background-image: url(../img/slide/slide-3.png);
 background-repeat: no-repeat;
-background-position: 50% 0;
+background-position: 100% 0%;
+width: 760px;
+height: 431px;
+left: 537px;
+top: 114px;
 }
+
 
 .btn {
   background-color: var(--accent-color);
   border-radius: 3px;
   color: var(--basic-white);
+  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  width: 160px;
-  height: 50px;
+  text-decoration: none;
+  border: 1px solid var(--accent-color);
 }
 
 /*Products*/
@@ -156,31 +189,30 @@ background-position: 50% 0;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
- }
-
- .products-list p {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
+  text-transform: uppercase;
  }
 
 .product-item {
 
 }
+/*Тот же вопрос по расположению изображений*/
 
 .product-sites {
   background-image: url(../img/web_site.png);
   background-repeat: no-repeat;
+  background-position: top;
 }
 
 .product-apps {
   background-image: url(../img/apps.png);
   background-repeat: no-repeat;
+  background-position: 0px 100px;
 }
 
 .product-presents {
   background-image: url(../img/presents.png);
   background-repeat: no-repeat;
+  background-position: 0 50%;
 }
 
 /*Description*/
@@ -223,7 +255,6 @@ background-position: 50% 0;
 }
 
 .desc-features-percent {
-  text-transform: uppercase;
   font-weight: bold;
   font-size: 45px;
   line-height: 64px;
@@ -266,43 +297,66 @@ opacity: 10%;
   font-size: 36px;
   line-height: 36px;
 }
-
-
-.contacts-title {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: normal;
-  text-transform: uppercase;
-  }
-
+/*адрес и телефон в контактах должны быть серыми, но если я прописываю цвет здесь,
+то окрашивается еще и тайтл контактов,не могу понять как сделать тайтл приоритетней*/
 .footer-contacts {
   font-size: 16px;
   line-height: 18px;
   font-weight: normal;
 }
-  
-.contacts-btn {
+/*а этот селектор выбирает кнопку @напишите нам в том числе,т.к она тоже является ссылкой,
+тоже проблема в приоритетности,как я поняла*/
+.footer-contacts a {
+  font-size: 16px;
+  line-height: 18px;
+  color: #666666;
+}
+.contacts-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
 
+/*тот же вопрос по отступу и размеру кнопки*/
+.contacts-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  border: 1px solid var(--accent-color);
+  padding: 5px;
 }
 
 .socials {
 list-style: none;
-
 }
 
+/*я подключила иконки в html, но теперь не понимаю как их разместить в середине кнопки?*/
 .social-button {
-  background-color: ;
   background-color: var(--grey);
+  background-position: center;
   border-radius: 50%;
   width: 81px;
   height: 81px;
+}
+/*не срабатывает при наведении, в чем ошибка?*/
+.social-button:hover {
+  color: var(--accent-color);
 }
 
 /*Modal*/
 
 .feedback-modal {
+  background: #FFFFFF;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+}
 
+.feedback-modal h2 {
+  font-size: 45px;
+  line-height: 53px;
 }
 
 .feedback-form {
@@ -313,19 +367,119 @@ list-style: none;
 
 }
 
-.feadback-form-input {
-
+.feadback-form-input,
+.feedback-form-textarea {
+  color: #444444;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  opacity: 0.5;
 }
 
-.feedback-form-textarea {
-
+/*Не срабатывает фокус*/
+.field:focus,
+.feadback-form-input:focus,
+.feedback-form-textarea:focus {
+  border-radius: 3px;
+  border-color: black;
 }
 
 .feedback-btn {
-
+  width: 259px;
+  height: 50px;
+  border: 1px solid var(--accent-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
 }
 
 .feedback-close {
 
 }
 
+/*Catalog*/
+
+.catalog-container h1 {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  background-color: #EEEEEE;
+}
+
+.filter-group legend {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filter-group ul {
+  list-style: none;
+}
+.filter-price-range {
+  background: #EEEEEE;
+  border-radius: 3px; 
+  border: 1px solid #EEEEEE;
+  width: 260px;
+  height: 80px;
+}
+
+.filter-price-min {
+  background: #EEEEEE;
+  border-radius: 3px; 
+  border: 1px solid #EEEEEE;
+  width: 80px;
+  height: 38px; 
+}
+
+.filter-price-max {
+  background: #EEEEEE;
+  border-radius: 3px; 
+  border: 1px solid #EEEEEE;
+  width: 80px;
+  height: 38px;
+}
+
+.filter-group input {
+  opacity: 0.4;
+}
+
+/*так цвет не меняется,какое тут нужно свойство?*/
+.filter-group input:hover{
+color: #4D4D4D;
+}
+
+.filter-group label {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #283136;
+}
+
+.filter-btn {
+  background: #EEEEEE;
+  border-radius: 3px;
+  border: 1px solid #EEEEEE;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.sorting ul {
+  list-style: none;
+}
+
+.sorting a {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.sorting-item,
+.sorting-item-icon {
+  color: #000000;
+}
