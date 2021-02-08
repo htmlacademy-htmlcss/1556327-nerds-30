@@ -60,10 +60,14 @@
 
   .site-nav-cart {
     display: inline-block;
+    background-image: url(../img/icons/icon-cart.svg);
+    background-repeat: no-repeat;
+    background-position: left;
   }
   
   .site-nav {
-    list-style: none;
+    list-style: none;  
+    display: inline-block;
   }
 
   .site-nav a,
