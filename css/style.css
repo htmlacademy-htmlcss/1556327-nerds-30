@@ -20,6 +20,7 @@
     --grey-active: #D5D5D5;
     --dark-grey: #283136;
     --light-grey: #444444; 
+    
   }
 
   .page-body {
@@ -191,14 +192,26 @@ background-image: url(../img/slide/slide-3.png);
  }
 
 .product-item {
-
+  padding-top: 146px;
 }
-/*Тот же вопрос по расположению изображений*/
+/*почему этот блок слипся со следующей секцией?*/
 
 .product-sites {
   background-image: url(../img/web_site.png);
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: top left;
+}
+
+.product-apps {
+  background-image: url(../img/apps.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.product-presents {
+  background-image: url(../img/presents.png);
+  background-repeat: no-repeat;
+  background-position: top left;
 }
 
 .product-apps .btn {
@@ -209,18 +222,6 @@ background-image: url(../img/slide/slide-3.png);
 .product-presents .btn {
   background-color: var(--yellow);
   border: 1px solid var(--yellow);
-}
-
-.product-apps {
-  background-image: url(../img/apps.png);
-  background-repeat: no-repeat;
-  background-position: top;
-}
-
-.product-presents {
-  background-image: url(../img/presents.png);
-  background-repeat: no-repeat;
-  background-position: top;
 }
 
 /*Description*/
