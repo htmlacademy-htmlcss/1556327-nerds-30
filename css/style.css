@@ -54,6 +54,14 @@
   
   }
 
+  .site-nav li {
+    display: inline-block;
+  }
+
+  .site-nav-cart {
+    display: inline-block;
+  }
+  
   .site-nav {
     list-style: none;
   }
