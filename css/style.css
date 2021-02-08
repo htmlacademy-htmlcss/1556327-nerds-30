@@ -189,10 +189,12 @@ background-image: url(../img/slide/slide-3.png);
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
- }
+   }
 
 .product-item {
   padding-top: 146px;
+  display: inline-block;  
+  width: 300px;
 }
 
 
@@ -277,10 +279,12 @@ background-image: url(../img/slide/slide-3.png);
 
 .clients-list {
   list-style: none;
+
 }
 
 .clients-item {
   opacity: 20%;
+  display: inline-block;
 }
 
 .clients-item:hover {
@@ -342,6 +346,7 @@ opacity: 10%;
 
 .socials {
 list-style: none;
+
 }
 
 /*я подключила иконки в html, но теперь не понимаю как их разместить в середине кнопки?*/
@@ -351,6 +356,7 @@ list-style: none;
   border-radius: 50%;
   width: 81px;
   height: 81px;
+  display: inline-block;
 }
 /*не срабатывает при наведении, в чем ошибка?*/
 .social-button:hover {
