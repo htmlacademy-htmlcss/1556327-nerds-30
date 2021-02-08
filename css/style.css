@@ -176,9 +176,9 @@ background-image: url(../img/slide/slide-3.png);
 /*Products*/
 
 .products {
-
+  width: 1100px;
+  height: 347px;
 }
-
 .products-list {
   list-style: none;
  }
@@ -214,13 +214,13 @@ background-image: url(../img/slide/slide-3.png);
 .product-apps {
   background-image: url(../img/apps.png);
   background-repeat: no-repeat;
-  background-position: 0px 100px;
+  background-position: top;
 }
 
 .product-presents {
   background-image: url(../img/presents.png);
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: top;
 }
 
 /*Description*/
