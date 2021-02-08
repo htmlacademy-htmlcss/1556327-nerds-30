@@ -1,16 +1,20 @@
 :root {
     --basic-black: #000000;
     --basic-white: #ffffff;
-    --background: #888888;
+    
     --accent-color: #FB565A;
     --acсent-color-hover: #E74246;
     --accent-color-active: #D7373B;
+
     --green: #00CA74;;
     --green-hover: #00BC6C;
     --green-active: #00AA62;
+
     --yellow: #EFC849;
     --yellow-hover: #EAB534;
     --yellow-active: #E5A722;
+
+    --background: #888888;
     --grey: #EEEEEE;
     --grey-hover: #DFDFDF;
     --grey-active: #D5D5D5;
@@ -64,24 +68,23 @@
     color: var(--accent-color);
   }
 
+  .logo:hover {
+    opacity: 70%;
+  }
+
   .site-nav a:active,
-  .site-nav-cart:active {
+  .site-nav-cart:active,
+  .logo:active {
     color: black;
     opacity: 30%;
   }
   
-  .logo:hover {
-    opacity: 70%;
-  }
-/*Почему этот селектор не работает, если его вставить к другим :active?*/
-  .logo:active {
-    opacity: 30%;
-  }
+  
 /*Как правильно спрятать заголовок,чтобы он не отображался белой полосой в браузере?*/
 
   .container h1,
   .container h2 {
-    visibility: hidden;
+    display: none;
   }
 
 /*Carousel*/
@@ -117,7 +120,8 @@
   font-size: 16px;
   line-height: 24px;
 }
-/*Не понимаю,откуда брать значение padding,для отступов текста от края кнопки?Или это вообще другое свойство?*/
+/*Не понимаю,откуда брать значение padding,для отступов текста от края кнопки?Или это вообще другое свойство?Вставила дисплей-блок,
+ вроде размер зафиксировался, ноя не помню, чтобы мы использовали его в тренажерах или лайве*/
 .slide-btn {
   border: 1px solid var(--accent-color);
   background-color: var(--accent-color);
@@ -128,7 +132,8 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  padding: 10px;
+  text-align: center;
+  display: block;
 }
 
 /*Как расположить картинку справа от текста? Пробовала 3мя значения b.position без толку*/
@@ -166,13 +171,17 @@ top: 114px;
 
 .btn {
   background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
   border-radius: 3px;
   color: var(--basic-white);
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  text-decoration: none;
-  border: 1px solid var(--accent-color);
+  text-decoration: none;  
+  text-align: center;  
+  width: 160px;
+  height: 50px;
+  display: block;
 }
 
 /*Products*/
@@ -201,6 +210,16 @@ top: 114px;
   background-image: url(../img/web_site.png);
   background-repeat: no-repeat;
   background-position: top;
+}
+
+.product-apps .btn {
+  background-color: var(--green);
+  border: 1px solid var(--green);
+}
+
+.product-presents .btn {
+  background-color: var(--yellow);
+  border: 1px solid var(--yellow);
 }
 
 .product-apps {
@@ -316,6 +335,7 @@ opacity: 10%;
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
+  color: #000000
 }
 
 /*тот же вопрос по отступу и размеру кнопки*/
@@ -323,8 +343,11 @@ opacity: 10%;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  color: var(--basic-white);
+  text-align: center;
   border: 1px solid var(--accent-color);
-  padding: 5px;
+  display: block;
+  
 }
 
 .socials {
@@ -393,6 +416,8 @@ list-style: none;
   line-height: 18px;
   text-transform: uppercase;
   color: var(--basic-white);
+  text-align: center;
+  display: block;
 }
 
 .feedback-close {
@@ -482,4 +507,8 @@ color: #4D4D4D;
 .sorting-item,
 .sorting-item-icon {
   color: #000000;
+}
+
+.catalog-list {
+  list-style: none;
 }
