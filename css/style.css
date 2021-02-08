@@ -136,36 +136,25 @@
   display: block;
 }
 
-/*Как расположить картинку справа от текста? Пробовала 3мя значения b.position без толку*/
-.slide-01 {
-  background-image: url(../img/slide/slide-1.png);
+
+.slide-01,
+.slide-02,
+.slide-03 {
+  width: 1160px;
+  height: 431px;
   background-repeat: no-repeat;
   background-position: right;
-  width: 760px;
-  height: 431px;
-  left: 537px;
-  top: 114px;
+}
+.slide-01 {
+  background-image: url(../img/slide/slide-1.png);
 }
 
 .slide-02 {
   background-image: url(../img/slide/slide-2.png);
-  background-repeat: no-repeat;
-  background-position: 200px 0px;
-  width: 760px;
-  height: 431px;
-  left: 537px;
-  top: 114px;
-
 }
 
 .slide-03 {
 background-image: url(../img/slide/slide-3.png);
-background-repeat: no-repeat;
-background-position: 100% 0%;
-width: 760px;
-height: 431px;
-left: 537px;
-top: 114px;
 }
 
 
