@@ -27,7 +27,7 @@
     background-color: var(--basic-white);
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif, Arial;
+    font-family: "Roboto", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -56,6 +56,7 @@
 
   .site-nav li {
     display: inline-block;
+    vertical-align: top;
   }
 
   .site-nav-cart {
@@ -68,6 +69,7 @@
   .site-nav {
     list-style: none;  
     display: inline-block;
+    vertical-align: top;
   }
 
   .site-nav a,
@@ -127,6 +129,7 @@
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
+  margin-top: 0px;
 }
 
 .slide-text {
@@ -439,6 +442,7 @@ list-style: none;
   font-size: 55px;
   line-height: 55px;
   background-color: #EEEEEE;
+  margin-top: 0px;
 }
 
 .filter-group legend {
@@ -519,4 +523,8 @@ color: #4D4D4D;
 
 .catalog-list {
   list-style: none;
+}
+
+.visually-hidden {
+  
 }
