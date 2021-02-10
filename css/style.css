@@ -142,25 +142,22 @@
   border: 1px solid var(--accent-color);
   background-color: var(--accent-color);
   color: var(--basic-white);
-  width: 240px;
-  height: 50px;
+  padding: 15px 15px;
   border-radius: 3px;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   text-align: center;
-  display: block;
+  display: inline-block;
 }
 
-
-.slide-01,
-.slide-02,
-.slide-03 {
+.slide-content {
   width: 1160px;
   height: 431px;
   background-repeat: no-repeat;
   background-position: right;
 }
+
 .slide-01 {
   background-image: url(../img/slide/slide-1.png);
 }
@@ -184,9 +181,8 @@ background-image: url(../img/slide/slide-3.png);
   line-height: 18px;
   text-decoration: none;  
   text-align: center;  
-  width: 160px;
-  height: 50px;
-  display: block;
+  padding: 15px 15px;
+  display: inline-block;
 }
 
 /*Products*/
@@ -297,16 +293,16 @@ background-image: url(../img/slide/slide-3.png);
 
 }
 
-.clients-item {
+.clients-item a{
   opacity: 20%;
   display: inline-block;
 }
 
-.clients-item:hover {
+.clients-item a:hover {
 opacity: 100%;
 }
 
-.clients-item:active {
+.clients-item a:active {
 opacity: 10%;
 }
 
@@ -325,9 +321,8 @@ opacity: 10%;
   font-size: 36px;
   line-height: 36px;
 }
-/*адрес и телефон в контактах должны быть серыми, но если я прописываю цвет здесь,
-то окрашивается еще и тайтл контактов,не могу понять как сделать тайтл приоритетней*/
-.footer-contacts {
+
+.footer-contacts:nth-child(2){
   font-size: 16px;
   line-height: 18px;
   font-weight: normal;
@@ -355,7 +350,8 @@ opacity: 10%;
   color: var(--basic-white);
   text-align: center;
   border: 1px solid var(--accent-color);
-  display: block;
+  padding: 15px 15px;
+  display: inline-block;
   
 }
 
@@ -419,8 +415,8 @@ list-style: none;
 }
 
 .feedback-btn {
-  width: 259px;
-  height: 50px;
+  padding: 15px 20px;
+  display: inline-block;
   border: 1px solid var(--accent-color);
   font-weight: 500;
   font-size: 16px;
@@ -502,7 +498,9 @@ color: #4D4D4D;
   color: black;
   font-weight: 500;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 18px; 
+  padding: 15px 15px;
+  display: inline-block;
 }
 
 .sorting ul {
@@ -526,5 +524,5 @@ color: #4D4D4D;
 }
 
 .visually-hidden {
-  
+  display: none;
 }
