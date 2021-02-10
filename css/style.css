@@ -64,6 +64,7 @@
     background-image: url(../img/icons/icon-cart.svg);
     background-repeat: no-repeat;
     background-position: left;
+    vertical-align: top;
   }
   
   .site-nav {
@@ -122,7 +123,14 @@
 
 /*Активная кнопка в карусели содержит в серединке еще один кружок,это сделать через обводку?*/
 .carousel-btn-active {
-
+  border-radius: 50%;
+  border: 1px solid var(--basic-white);
+  background-color: var(--basic-white);
+  background-image: url(../img/icons/icon-ellipse.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
 }
 
 .slide-head {
@@ -293,10 +301,13 @@ background-image: url(../img/slide/slide-3.png);
 
 }
 
-.clients-item a{
-  opacity: 20%;
+.clients-list li {
   display: inline-block;
 }
+
+.clients-item a{
+  opacity: 20%;
+ }
 
 .clients-item a:hover {
 opacity: 100%;
@@ -327,9 +338,8 @@ opacity: 10%;
   line-height: 18px;
   font-weight: normal;
 }
-/*а этот селектор выбирает кнопку @напишите нам в том числе,т.к она тоже является ссылкой,
-тоже проблема в приоритетности,как я поняла*/
-.footer-contacts a {
+
+.footer-contacts-text {
   font-size: 16px;
   line-height: 18px;
   color: #666666;
@@ -342,7 +352,6 @@ opacity: 10%;
   color: #000000
 }
 
-/*тот же вопрос по отступу и размеру кнопки*/
 .contacts-btn {
   font-weight: 500;
   font-size: 16px;
@@ -360,7 +369,6 @@ list-style: none;
 
 }
 
-/*я подключила иконки в html, но теперь не понимаю как их разместить в середине кнопки?*/
 .social-button {
   background-color: var(--grey);
   background-position: center;
@@ -369,11 +377,14 @@ list-style: none;
   height: 81px;
   display: inline-block;
 }
-/*не срабатывает при наведении, в чем ошибка?*/
+
 .social-button:hover {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
+.social-button:active {
+  background-color: var(--accent-color-active);
+}
 /*Modal*/
 
 .feedback-modal {
@@ -479,8 +490,7 @@ list-style: none;
   opacity: 0.4;
 }
 
-/*так цвет не меняется,какое тут нужно свойство?*/
-.filter-group input:hover{
+.filter-group label:hover{
 color: #4D4D4D;
 }
 
