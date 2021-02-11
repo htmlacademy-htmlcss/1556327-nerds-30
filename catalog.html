@@ -43,17 +43,11 @@
       <h2 class="visually-hidden">Фильтр</h2>
       <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
         <fieldset class="filter-price-range">
-          <div class="filter-price-roller">
-            <input type="range" min="0" max="15000" step="1" value="10000">
-          </div>
-          <div class="filter-price-min">
-            <label for="filter-price-min">От</label>
-            <input type="number" name="filter-price-min" value="0" min="0" id="filter-price-min">
-          </div>
-          <div class="filter-price-max">
-            <label for="filter-price-max">До</label>
-            <input type="number" name="filter-price-max" value="15000" min="0" id="filter-price-max">
-          </div>
+          <input type="range" min="0" max="15000" step="1" value="10000">
+          <label for="filter-price-min">От</label>
+          <input type="number" name="filter-price-min" value="0" min="0" id="filter-price-min">
+          <label for="filter-price-max">До</label>
+          <input type="number" name="filter-price-max" value="15000" min="0" id="filter-price-max">
         </fieldset>
         <fieldset class="filter-group">
           <legend>Сетка:</legend>

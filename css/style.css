@@ -71,7 +71,6 @@
     list-style: none;  
     display: inline-block;
     vertical-align: top;
-    margin: 0;
   }
 
   .site-nav a,
@@ -80,9 +79,6 @@
     color: black;
   }
 
-  .site-nav-cart {
-    padding-left: 20px;
-  }
   .site-nav a:hover,
   .site-nav-cart:hover {
     color: var(--accent-color);
@@ -99,6 +95,13 @@
     opacity: 30%;
   }
   
+  
+/*Как правильно спрятать заголовок,чтобы он не отображался белой полосой в браузере?*/
+
+  .container h1,
+  .container h2 {
+    display: none;
+  }
 
 /*Carousel*/
 
@@ -336,8 +339,7 @@ opacity: 10%;
   font-weight: normal;
 }
 
-.footer-contacts-text,
-.footer-contacts-text a {
+.footer-contacts-text {
   font-size: 16px;
   line-height: 18px;
   color: #666666;
@@ -460,7 +462,6 @@ list-style: none;
 .filter-group ul {
   list-style: none;
 }
-/*
 .filter-price-range {
   background: #EEEEEE;
   border-radius: 3px; 
@@ -468,19 +469,21 @@ list-style: none;
   width: 260px;
   height: 80px;
 }
-*/
 
-
-.filter-price-max,
-.filter-price-min,
-.filter-price-roller {
+.filter-price-min {
   background: #EEEEEE;
   border-radius: 3px; 
   border: 1px solid #EEEEEE;
-  width: 150px;
+  width: 80px;
+  height: 38px; 
+}
+
+.filter-price-max {
+  background: #EEEEEE;
+  border-radius: 3px; 
+  border: 1px solid #EEEEEE;
+  width: 80px;
   height: 38px;
-  display: inline-block;
-  vertical-align: top;
 }
 
 .filter-group input {
