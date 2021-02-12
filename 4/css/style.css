@@ -27,7 +27,7 @@
     background-color: var(--basic-white);
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif, Arial;
+    font-family: "Roboto", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -56,6 +56,7 @@
 
   .site-nav li {
     display: inline-block;
+    vertical-align: top;
   }
 
   .site-nav-cart {
@@ -63,11 +64,13 @@
     background-image: url(../img/icons/icon-cart.svg);
     background-repeat: no-repeat;
     background-position: left;
+    vertical-align: top;
   }
   
   .site-nav {
     list-style: none;  
     display: inline-block;
+    vertical-align: top;
   }
 
   .site-nav a,
@@ -120,13 +123,21 @@
 
 /*Активная кнопка в карусели содержит в серединке еще один кружок,это сделать через обводку?*/
 .carousel-btn-active {
-
+  border-radius: 50%;
+  border: 1px solid var(--basic-white);
+  background-color: var(--basic-white);
+  background-image: url(../img/icons/icon-ellipse.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
 }
 
 .slide-head {
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
+  margin-top: 0px;
 }
 
 .slide-text {
@@ -139,25 +150,22 @@
   border: 1px solid var(--accent-color);
   background-color: var(--accent-color);
   color: var(--basic-white);
-  width: 240px;
-  height: 50px;
+  padding: 15px 15px;
   border-radius: 3px;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   text-align: center;
-  display: block;
+  display: inline-block;
 }
 
-
-.slide-01,
-.slide-02,
-.slide-03 {
+.slide-content {
   width: 1160px;
   height: 431px;
   background-repeat: no-repeat;
   background-position: right;
 }
+
 .slide-01 {
   background-image: url(../img/slide/slide-1.png);
 }
@@ -181,9 +189,8 @@ background-image: url(../img/slide/slide-3.png);
   line-height: 18px;
   text-decoration: none;  
   text-align: center;  
-  width: 160px;
-  height: 50px;
-  display: block;
+  padding: 15px 15px;
+  display: inline-block;
 }
 
 /*Products*/
@@ -294,16 +301,19 @@ background-image: url(../img/slide/slide-3.png);
 
 }
 
-.clients-item {
-  opacity: 20%;
+.clients-list li {
   display: inline-block;
 }
 
-.clients-item:hover {
+.clients-item a{
+  opacity: 20%;
+ }
+
+.clients-item a:hover {
 opacity: 100%;
 }
 
-.clients-item:active {
+.clients-item a:active {
 opacity: 10%;
 }
 
@@ -322,16 +332,14 @@ opacity: 10%;
   font-size: 36px;
   line-height: 36px;
 }
-/*адрес и телефон в контактах должны быть серыми, но если я прописываю цвет здесь,
-то окрашивается еще и тайтл контактов,не могу понять как сделать тайтл приоритетней*/
-.footer-contacts {
+
+.footer-contacts:nth-child(2){
   font-size: 16px;
   line-height: 18px;
   font-weight: normal;
 }
-/*а этот селектор выбирает кнопку @напишите нам в том числе,т.к она тоже является ссылкой,
-тоже проблема в приоритетности,как я поняла*/
-.footer-contacts a {
+
+.footer-contacts-text {
   font-size: 16px;
   line-height: 18px;
   color: #666666;
@@ -344,7 +352,6 @@ opacity: 10%;
   color: #000000
 }
 
-/*тот же вопрос по отступу и размеру кнопки*/
 .contacts-btn {
   font-weight: 500;
   font-size: 16px;
@@ -352,7 +359,8 @@ opacity: 10%;
   color: var(--basic-white);
   text-align: center;
   border: 1px solid var(--accent-color);
-  display: block;
+  padding: 15px 15px;
+  display: inline-block;
   
 }
 
@@ -361,7 +369,6 @@ list-style: none;
 
 }
 
-/*я подключила иконки в html, но теперь не понимаю как их разместить в середине кнопки?*/
 .social-button {
   background-color: var(--grey);
   background-position: center;
@@ -370,11 +377,14 @@ list-style: none;
   height: 81px;
   display: inline-block;
 }
-/*не срабатывает при наведении, в чем ошибка?*/
+
 .social-button:hover {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
+.social-button:active {
+  background-color: var(--accent-color-active);
+}
 /*Modal*/
 
 .feedback-modal {
@@ -416,8 +426,8 @@ list-style: none;
 }
 
 .feedback-btn {
-  width: 259px;
-  height: 50px;
+  padding: 15px 20px;
+  display: inline-block;
   border: 1px solid var(--accent-color);
   font-weight: 500;
   font-size: 16px;
@@ -439,6 +449,7 @@ list-style: none;
   font-size: 55px;
   line-height: 55px;
   background-color: #EEEEEE;
+  margin-top: 0px;
 }
 
 .filter-group legend {
@@ -479,8 +490,7 @@ list-style: none;
   opacity: 0.4;
 }
 
-/*так цвет не меняется,какое тут нужно свойство?*/
-.filter-group input:hover{
+.filter-group label:hover{
 color: #4D4D4D;
 }
 
@@ -498,7 +508,9 @@ color: #4D4D4D;
   color: black;
   font-weight: 500;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 18px; 
+  padding: 15px 15px;
+  display: inline-block;
 }
 
 .sorting ul {
@@ -519,4 +531,8 @@ color: #4D4D4D;
 
 .catalog-list {
   list-style: none;
+}
+
+.visually-hidden {
+  display: none;
 }
