@@ -242,13 +242,13 @@ background-image: url(../img/slide/slide-3.png);
 }
 
 .product-sites .btn:hover {
-  background-color: #E74246;
-  border: 1px solid #E74246;
+  background-color: var(--acсent-color-hover);
+  border: 1px solid var(--acсent-color-hover);
 }
 
 .product-sites .btn:active {
-  background-color: #D7373B;
-  border: 1px solid #D7373B;
+  background-color: var(--accent-color-active);
+  border: 1px solid var(--accent-color-active);
 }
 
 .product-apps .btn {
