@@ -66,6 +66,7 @@
     background-position: left;
     vertical-align: top;
     padding-left: 25px;
+    margin-top: 16px;
   }
   
   .site-nav {
@@ -402,8 +403,7 @@ opacity: 10%;
 }
 
 .socials {
-list-style: none;
-
+  list-style: none;
 }
 
 .social-button {
@@ -414,6 +414,13 @@ list-style: none;
   height: 81px;
   display: inline-block;
 }
+
+.footer-social div,
+.socials {
+  display: inline-block;
+  vertical-align: top;
+}
+
 
 .social-button:hover {
   background-color: var(--accent-color);
@@ -584,4 +591,27 @@ color: #4D4D4D;
 
 .visually-hidden {
   display: none;
+}
+
+.filters,
+.shop {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.sorting-list li,
+.sorting-list,
+.sorting h3 {
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+}
+
+.sorting-list,
+.sorting h3 {
+  margin: 16px 16px;
+}
+
+.pagination-item {
+  display: inline-block;
 }
