@@ -44,11 +44,19 @@
       <h2 class="visually-hidden">Фильтр</h2>
       <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
         <fieldset class="filter-price-range">
-          <input type="range" min="0" max="15000" step="1" value="10000">
-          <label for="filter-price-min">От</label>
-          <input type="number" name="filter-price-min" value="0" min="0" id="filter-price-min">
-          <label for="filter-price-max">До</label>
-          <input type="number" name="filter-price-max" value="15000" min="0" id="filter-price-max">
+          <div class="range">
+            <input type="range" min="0" max="15000" step="1" value="10000">
+          </div>
+          <div class="filter-price-min-max">
+              <div>
+              <label for="filter-price-min">От</label>
+              <input class="filter-price" type="number" name="filter-price-min" value="0" min="0" id="filter-price-min">
+            </div>
+            <div>
+              <label for="filter-price-max">До</label>
+              <input  class="filter-price" type="number" name="filter-price-max" value="15000" min="0" id="filter-price-max">
+            </div>
+          </div>
         </fieldset>
         <fieldset class="filter-group">
           <legend>Сетка:</legend>
@@ -95,7 +103,7 @@
         <button class="btn filter-btn" type="submit">Показать</button>
       </form>
     </section>
-    <section>
+    <section class="shop">
       <h2 class="visually-hidden">Готовые шаблоны</h2>
       <div class="sorting">
         <h3>Сортировать:</h3>
@@ -205,9 +213,7 @@
       </div>
       <a class="btn contacts-btn" href="#">Напишите нам</a>
     </section>
-    <section class="footer-social">
-      <h2>Давайте дружить, это выгодно!</h2>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+    <section class="footer-social">      
       <ul class="socials">
         <li class="social-button">
           <a href="#"><img src="#" alt="Наша страница Вконтакте"></a>
@@ -219,6 +225,10 @@
           <a href="#"><img src="#" alt="Наша профиль в Инстаграм"></a>
         </li>
       </ul>
+      <div>
+        <h2>Давайте дружить, это выгодно!</h2>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
     </section>
   </footer>
   <section class="feedback-modal">

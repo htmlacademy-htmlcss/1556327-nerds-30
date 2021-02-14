@@ -65,6 +65,8 @@
     background-repeat: no-repeat;
     background-position: left;
     vertical-align: top;
+    padding-left: 25px;
+    margin-top: 16px;
   }
   
   .site-nav {
@@ -121,7 +123,7 @@
   height: 18px;
 }
 
-/*Активная кнопка в карусели содержит в серединке еще один кружок,это сделать через обводку?*/
+
 .carousel-btn-active {
   border-radius: 50%;
   border: 1px solid var(--basic-white);
@@ -144,8 +146,7 @@
   font-size: 16px;
   line-height: 24px;
 }
-/*Не понимаю,откуда брать значение padding,для отступов текста от края кнопки?Или это вообще другое свойство?Вставила дисплей-блок,
- вроде размер зафиксировался, ноя не помню, чтобы мы использовали его в тренажерах или лайве*/
+
 .slide-btn {
   border: 1px solid var(--accent-color);
   background-color: var(--accent-color);
@@ -191,6 +192,7 @@ background-image: url(../img/slide/slide-3.png);
   text-align: center;  
   padding: 15px 15px;
   display: inline-block;
+  vertical-align: top;
 }
 
 /*Products*/
@@ -235,14 +237,50 @@ background-image: url(../img/slide/slide-3.png);
   background-position: top left;
 }
 
+.product-sites .btn {
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
+.product-sites .btn:hover {
+  background-color: var(--acсent-color-hover);
+  border: 1px solid var(--acсent-color-hover);
+}
+
+.product-sites .btn:active {
+  background-color: var(--accent-color-active);
+  border: 1px solid var(--accent-color-active);
+}
+
 .product-apps .btn {
   background-color: var(--green);
   border: 1px solid var(--green);
 }
 
+.product-apps .btn:hover {
+  background-color: var(--green-hover);
+  border: 1px solid var(--green-hover);
+}
+
+.product-apps .btn:active {
+  background-color: var(--green-active);
+  border: 1px solid var(--green-active);
+}
+
+
 .product-presents .btn {
   background-color: var(--yellow);
   border: 1px solid var(--yellow);
+}
+
+.product-presents .btn:hover {
+  background-color: var(--yellow-hover);
+  border: 1px solid var(--yellow-hover);
+}
+
+.product-presents .btn:active {
+  background-color: var(--yellow-active);
+  border: 1px solid var(--yellow-active);
 }
 
 /*Description*/
@@ -365,8 +403,7 @@ opacity: 10%;
 }
 
 .socials {
-list-style: none;
-
+  list-style: none;
 }
 
 .social-button {
@@ -377,6 +414,13 @@ list-style: none;
   height: 81px;
   display: inline-block;
 }
+
+.footer-social div,
+.socials {
+  display: inline-block;
+  vertical-align: top;
+}
+
 
 .social-button:hover {
   background-color: var(--accent-color);
@@ -462,28 +506,40 @@ list-style: none;
 .filter-group ul {
   list-style: none;
 }
+
 .filter-price-range {
-  background: #EEEEEE;
-  border-radius: 3px; 
-  border: 1px solid #EEEEEE;
+  display: inline-block;
   width: 260px;
-  height: 80px;
+  vertical-align: auto;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  
 }
 
-.filter-price-min {
+.range {
   background: #EEEEEE;
-  border-radius: 3px; 
-  border: 1px solid #EEEEEE;
-  width: 80px;
+  display: inline-block;
+  vertical-align: auto;
+  padding: 10px;
+}
+.filter-price {
+  background: #EEEEEE;
+  width: 50px;
   height: 38px; 
+  vertical-align: auto;
+  text-align: center;
 }
 
-.filter-price-max {
-  background: #EEEEEE;
-  border-radius: 3px; 
-  border: 1px solid #EEEEEE;
-  width: 80px;
-  height: 38px;
+.filter-price-min-max {
+  display: flex;
+  vertical-align: auto;
+}
+
+.filter-group {
+  display: block;
+  width: 208px;
 }
 
 .filter-group input {
@@ -497,7 +553,7 @@ color: #4D4D4D;
 .filter-group label {
   font-weight: normal;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 20px;
   color: #283136;
 }
 
@@ -521,7 +577,7 @@ color: #4D4D4D;
   text-decoration: none;
   font-weight: normal;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 18px; 
 }
 
 .sorting-item,
@@ -535,4 +591,27 @@ color: #4D4D4D;
 
 .visually-hidden {
   display: none;
+}
+
+.filters,
+.shop {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.sorting-list li,
+.sorting-list,
+.sorting h3 {
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+}
+
+.sorting-list,
+.sorting h3 {
+  margin: 16px 16px;
+}
+
+.pagination-item {
+  display: inline-block;
 }
