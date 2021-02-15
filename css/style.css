@@ -97,13 +97,10 @@
     opacity: 30%;
   }
   
-  
-/*Как правильно спрятать заголовок,чтобы он не отображался белой полосой в браузере?*/
-
-  .container h1,
-  .container h2 {
-    display: none;
-  }
+.container h1,
+.container h2 {
+  display: none;
+}
 
 /*Carousel*/
 
@@ -195,6 +192,17 @@ background-image: url(../img/slide/slide-3.png);
   vertical-align: top;
 }
 
+.btn:hover {
+  background-color: var(--acсent-color-hover);
+  border: 1px solid var(--acсent-color-hover);
+  border-radius: 3px;
+}
+
+.btn:active {
+  background-color: var(--accent-color-active);
+  border: 1px solid var(--accent-color-active);
+  border-radius: 3px;
+}
 /*Products*/
 
 .products {
@@ -558,7 +566,7 @@ color: #4D4D4D;
 }
 
 .filter-btn {
-  background: #EEEEEE;
+  background-color: var(--grey);
   border-radius: 3px;
   border: 1px solid #EEEEEE;
   color: black;
@@ -567,6 +575,20 @@ color: #4D4D4D;
   line-height: 18px; 
   padding: 15px 15px;
   display: inline-block;
+  vertical-align: top;
+}
+
+
+.filter-btn:hover {
+  background-color: var(--grey-hover);
+  border-radius: 3px;
+  border: 1px solid var(--grey-hover);
+}
+
+.filter-btn:active {
+  background-color: var(--grey-active);
+  border-radius: 3px;
+  border: 1px solid var(--grey-active);
 }
 
 .sorting ul {
