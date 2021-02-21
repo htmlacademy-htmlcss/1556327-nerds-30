@@ -43,11 +43,12 @@
       <h2 class="visually-hidden">Фильтр</h2>
       <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
         <fieldset class="filter-price-range">
-          <div class="range">
-            <input type="range" min="0" max="15000" step="1" value="10000">
+          <legend>Стоимость:</legend>
+          <div class="range">            
+            <input type="range" min="0" max="15000" step="1" value="10000" id="cost">            
           </div>
           <div class="filter-price-min-max">
-              <div>
+            <div>
               <label for="filter-price-min">От</label>
               <input class="filter-price" type="number" name="filter-price-min" value="0" min="0" id="filter-price-min">
             </div>

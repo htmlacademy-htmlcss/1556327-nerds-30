@@ -22,7 +22,9 @@
     --light-grey: #444444; 
     
   }
-
+  .page {
+    height: 100%;
+  }
   .page-body {
     background-color: var(--basic-white);
     margin: 0;
@@ -37,6 +39,10 @@
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     align-content: start;
+  }
+
+  .page-body  {
+    
   }
    
   img {
@@ -53,7 +59,8 @@
     font-size: 16px;
     line-height: 30px;
     margin-bottom: 10px;
-    
+    width: 1150px;
+    margin: 0 auto;
   }
 
   .main-navigation {
@@ -66,11 +73,14 @@
   display: inline-block;
   vertical-align: top;
   }
-/*Почему иконка корзинки отваливается от текста?*/
+
   .site-nav-cart {    
     background-image: url(../img/icons/icon-cart.svg);
     background-repeat: no-repeat;
-    background-position: left;  
+    background-position: center left;
+    padding-left: 20px;
+    display: inline-block;
+    height: fit-content;
   }
   
   .site-nav {
@@ -108,7 +118,9 @@
 
 .main-content {
   display: grid;
-  grid-template-rows: 450px 500px 500px 100px;
+  grid-template-rows: auto auto auto auto;
+  width: 1150px;
+  margin: 0 auto;
 }
 
 
@@ -116,10 +128,8 @@
 
 .carousel {
   background-color: var(--grey);
-}
-.slide-container {  
-  display: grid;
-  width: auto;
+  grid-column: 1 / -1;
+  
 }
 
 .carousel-nav {
@@ -172,8 +182,8 @@
 }
 
 .slide-content {
-  width: 1160px;
-  height: 431px;
+  width: auto;
+  height: 430px;
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -225,6 +235,9 @@ background-image: url(../img/slide/slide-3.png);
 
 .products-list {
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
  }
 
  .products-list h3 {
@@ -308,7 +321,8 @@ background-image: url(../img/slide/slide-3.png);
 /*Description*/
 
 .desc {
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .desc-head {
@@ -333,12 +347,17 @@ background-image: url(../img/slide/slide-3.png);
 
 .desc-features {
   list-style: none;
+  padding: 0;
 }
 
 .desc-features-item {
-
+  display: inline-block;
+  width: min-content;
 }
 
+.desc-features-item p {
+  margin: 10px;
+}
 .desc-features-text {
   font-size: 16px;
   line-height: 18px;
@@ -353,12 +372,14 @@ background-image: url(../img/slide/slide-3.png);
 /*Clients*/
 
 .clients {
-
+  
 }
 
 .clients-list {
   list-style: none;
-
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: auto;
 }
 
 .clients-list li {
@@ -380,6 +401,7 @@ opacity: 10%;
 /*Footer*/
 
 .main-footer {
+  margin: 0 auto;
 
 }
 
@@ -392,6 +414,17 @@ opacity: 10%;
   font-size: 36px;
   line-height: 36px;
 }
+
+.footer-contacts {
+  position: relative;
+  top: -390px;
+  left: 140px;
+  background-color: white;
+  padding: 30px;
+  width: fit-content;
+}
+
+
 
 .footer-contacts:nth-child(2){
   font-size: 16px;
@@ -510,15 +543,26 @@ opacity: 10%;
 
 /*Catalog*/
 
+.catalog-container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-content: start;
+  width: 1150px;
+  margin: 0 auto;
+}
+
 .catalog-container h1 {
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
   background-color: #EEEEEE;
-  margin-top: 0px;
+  margin: 0;
+  padding: 0;
+  grid-column: 1 / -1;
+  margin-bottom: 100px;
 }
 
-.filter-group legend {
+.filter-form legend {
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
@@ -527,6 +571,7 @@ opacity: 10%;
 
 .filter-group ul {
   list-style: none;
+  width: 260px;
 }
 
 .filter-price-range {
@@ -537,7 +582,7 @@ opacity: 10%;
   font-size: 16px;
   line-height: 22px;
   text-transform: uppercase;
-  
+  margin: 0;
 }
 
 .range {
@@ -556,7 +601,7 @@ opacity: 10%;
 
 .filter-price-min-max {
   display: flex;
-  vertical-align: auto;
+  
 }
 
 .filter-group {
@@ -609,6 +654,13 @@ color: #4D4D4D;
   list-style: none;
 }
 
+.sorting {
+  grid-column: 1 / -1;
+  margin-bottom: 40px;
+  padding: 0;
+  margin: 0;
+}
+
 .sorting a {
   text-decoration: none;
   font-weight: normal;
@@ -629,12 +681,10 @@ color: #4D4D4D;
   display: none;
 }
 
-.filters,
 .shop {
-  display: inline-block;
-  vertical-align: top;
+  margin-left: 140px;
 }
-
+/*
 .sorting-list li,
 .sorting-list,
 .sorting h3 {
@@ -651,3 +701,5 @@ color: #4D4D4D;
 .pagination-item {
   display: inline-block;
 }
+
+*/
