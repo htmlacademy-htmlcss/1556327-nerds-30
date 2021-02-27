@@ -685,18 +685,23 @@ color: #4D4D4D;
   grid-template-rows: 1fr 1fr 1fr;
   column-gap: 40px;
   row-gap: 30px;
+  
 }
 
 .catalog-item h3{
   text-transform: uppercase;
 }
 
+.catalog-item {
+  position: relative;
+}
 .catalog-item-content {
   background-color: #EEEEEE;
   width: 360px;
   height: 231px;
   text-align: center;
-  padding-top: 25px;
+  padding-top: 25px;  
+  position: absolute;
 }
 
 .visually-hidden {
