@@ -41,10 +41,6 @@
     align-content: start;
   }
 
-  img {
-    max-width: 100%;
-    height: auto;
-  }
   
   /*MAIN NAVIGATION*/
 
@@ -405,6 +401,7 @@ opacity: 10%;
 
 .main-footer {
   margin: 0 auto; 
+  position: relative;
 }
 
 .map {
@@ -418,7 +415,12 @@ opacity: 10%;
 }
 
 .footer-contacts {
-  
+  position: absolute;
+  top: 40px;
+  background-color: var(--basic-white);  
+  width: 308px;
+  height: 319px;
+  text-align: center;
 }
 
 
@@ -702,6 +704,7 @@ color: #4D4D4D;
   text-align: center;
   padding-top: 25px;  
   position: absolute;
+  bottom: 0px;
 }
 
 .visually-hidden {
