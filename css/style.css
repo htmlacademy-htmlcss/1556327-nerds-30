@@ -486,6 +486,21 @@ opacity: 10%;
   display: inline-block;
 }
 
+.social-button-vk {
+  background-image: url(../img/icons/icon-vk.svg);
+  background-repeat: no-repeat;  
+}
+
+.social-button-fb {
+  background-image: url(../img/icons/icon-fb.svg);
+  background-repeat: no-repeat;
+}
+
+.social-button-inst {
+  background-image: url(../img/icons/icon-instagram.svg);
+  background-repeat: no-repeat;
+}
+
 .footer-social div,
 .socials {
   display: inline-block;
@@ -675,20 +690,40 @@ color: #4D4D4D;
 
 .sorting ul {
   list-style: none;
+  padding: 0;
 }
 
+.sorting h3 {
+  text-transform: uppercase;
+}
 .sorting {
-  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: max-content auto max-content;
   margin-bottom: 40px;
   padding: 0;
   margin: 0;
 }
 
+.sorting-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+
+.sorting-list li {
+  margin-right: 25px;
+}
+
+.sorting-list-simbol li {
+  margin-left: 18px;
+}
 .sorting a {
   text-decoration: none;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px; 
+  text-transform: uppercase;
 }
 
 .sorting-item,
@@ -696,6 +731,10 @@ color: #4D4D4D;
   color: #000000;
 }
 
+.sorting-list-simbol {
+  display: flex;
+  justify-content: flex-end;
+}
 .catalog-list {
   list-style: none;
   padding: 0;
@@ -734,8 +773,58 @@ color: #4D4D4D;
 .pagination-list {
   display: flex;
   list-style: none;
-  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0;
 }
+
+.pagination-item a,
+.pagination-item-switch a {
+  margin-top: 16px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.pagination-item {
+  height: 50px;
+  background-color: #EEEEEE;
+  margin-right: 11px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.pagination-item-number {
+  width: 50px;
+}
+
+.pagination-item-number:active {
+  background: #D5D5D5;
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  border-radius: 3px;
+}
+
+.pagination-item-number:hover {
+  background: #DFDFDF;
+}
+
+.pagination-item-checked {
+  background: rgba(0, 0, 0, 0.0001);
+  border: 3px solid #DBDBDB;
+  box-sizing: border-box;
+}
+
+.pagination-item-checked a{
+  margin-top: 13px;
+}
+
+.pagination-item-switch {   
+  padding: 0 75px;  
+}
+
+
 /*
 .sorting-list li,
 .sorting-list,
