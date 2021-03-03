@@ -136,8 +136,10 @@
   background-color: var(--grey);
   padding-top: 10px;
 }
-
-.carousel-nav {
+.carousel-nav {  
+  text-align: center;
+}
+.carousel-nav-container {  
   
 }
 
