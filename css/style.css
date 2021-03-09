@@ -582,6 +582,7 @@ opacity: 10%;
   align-content: start;
   width: 1160px;
   margin: 0 auto;
+  margin-top: 55px;
   column-gap: 140px;
 }
 
@@ -598,10 +599,16 @@ opacity: 10%;
   grid-column: 1 / -1; 
 }
 
-.filters {
-  
+.filter-form fieldset {
+  border: 0px;
+  padding: 0;
+  margin: 0;  
 }
 
+.filter-price-range legend, 
+.sorting h3 {
+  margin-bottom: 48px;
+}
 .filter-form legend {
   font-weight: bold;
   font-size: 18px;
@@ -612,6 +619,8 @@ opacity: 10%;
 .filter-group ul {
   list-style: none;
   width: 260px;
+  padding: 0;
+  margin: 0;
 }
 
 .filter-price-range {
@@ -622,7 +631,6 @@ opacity: 10%;
   font-size: 16px;
   line-height: 22px;
   text-transform: uppercase;
-  margin: 0;
 }
 
 .range {
@@ -641,7 +649,7 @@ opacity: 10%;
 
 .filter-price-min-max {
   display: flex;
-  
+  margin-bottom: 54px;
 }
 
 .filter-group {
@@ -672,9 +680,13 @@ color: #4D4D4D;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px; 
-  padding: 15px 15px;
+  text-transform: uppercase;  
+  padding: 17px;
   display: inline-block;
   vertical-align: top;
+  width: 260px;
+  height: 50px;
+  margin-top: 48px;
 }
 
 
@@ -693,10 +705,13 @@ color: #4D4D4D;
 .sorting ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .sorting h3 {
   text-transform: uppercase;
+  padding: 0;
+  margin: 0;
 }
 .sorting {
   display: grid;
@@ -704,6 +719,7 @@ color: #4D4D4D;
   margin-bottom: 40px;
   padding: 0;
   margin: 0;
+  margin-bottom: 55px;
 }
 
 .sorting-list {
@@ -728,11 +744,14 @@ color: #4D4D4D;
   text-transform: uppercase;
 }
 
-.sorting-item,
-.sorting-item-icon {
+.sorting-item {
   color: #000000;
+  opacity: 30%;
 }
-
+ .sorting-item-active {
+  color: #000000;
+  opacity: 100%;
+ }
 .sorting-list-simbol {
   display: flex;
   justify-content: flex-end;
@@ -754,6 +773,11 @@ color: #4D4D4D;
 .catalog-item {
   position: relative;
 }
+
+.catalog-item:hover .catalog-item-content
+{
+  visibility: visible;
+}
 .catalog-item-content {
   background-color: #EEEEEE;
   width: 360px;
@@ -762,6 +786,7 @@ color: #4D4D4D;
   padding-top: 25px;  
   position: absolute;
   bottom: 0px;
+  visibility: hidden;
 }
 
 .visually-hidden {
