@@ -621,6 +621,7 @@ opacity: 10%;
   width: 260px;
   padding: 0;
   margin: 0;
+  margin-left: 42px;
 }
 
 .filter-price-range {
@@ -664,6 +665,54 @@ opacity: 10%;
 .filter-group label:hover{
 color: #4D4D4D;
 }
+
+.filter-option label {
+  display: block;
+  position: relative;
+}
+
+.filter-option {
+  margin-bottom: 20px;
+}
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/icons/checkbox-off.svg);
+  opacity: 0.4;
+  background-repeat: no-repeat;
+}
+
+.filter-input-checkbox:checked + label::before {
+  background-image: url(../img/icons/checkbox-on.svg);  
+}
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/icons/radio-off.svg);
+  opacity: 0.4;
+}
+.filter-input-radio:hover + label::before {
+  opacity: 100%;
+}
+.filter-input-checkbox:hover + label::before {
+  opacity: 100%;
+}
+
+.filter-input-radio:checked + label::before {
+ 
+  background-image: url(../img/icons/radio-off.svg), url(../img/icons/radio-on.svg);
+  background-repeat: no-repeat;
+  background-position: center, center;
+  }
 
 .filter-group label {
   font-weight: normal;
