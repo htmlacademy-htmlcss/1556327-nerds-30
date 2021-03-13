@@ -48,35 +48,46 @@
     <section class="filters">
       <h2 class="visually-hidden">Фильтр</h2>
       <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
-        <fieldset class="filter-price-range">
+        <fieldset class="filter-item">
           <legend>Стоимость:</legend>
-          <div class="range">            
-            <input type="range" min="0" max="15000" step="1" value="10000" id="cost">            
-          </div>
-          <div class="filter-price-min-max">
-            <div>
-              <label for="filter-price-min">От</label>
-              <input class="filter-price" type="number" name="filter-price-min" value="0" min="0" id="filter-price-min">
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="
+                  width: 65%;
+                  margin-left: 5%
+                "></div>
+              </div>
+              <div class="toggle toggle-min" tabindex="0" style="
+                left: 5%
+              "></div>
+              <div class="toggle toggle-max" tabindex="0" style="
+                left: 65%
+              "></div>
             </div>
-            <div>
-              <label for="filter-price-max">До</label>
-              <input  class="filter-price" type="number" name="filter-price-max" value="15000" min="0" id="filter-price-max">
+            <div class="price-controls">
+              <label class="min-price">
+                от <input type="number" name="min-price" value="0">
+              </label>
+              <label class="max-price">
+                до <input type="number" name="max-price" value="15000">
+              </label>
             </div>
           </div>
-        </fieldset>
+      </fieldset>
         <fieldset class="filter-group">
           <legend>Сетка:</legend>
           <ul>
             <li class="filter-option filter-radio">
-              <input class="filter-input-radio" type="radio" name="product-filter" value="adaptive" id="filter-adaptive" checked>
+              <input class="visually-hidden filter-input-radio" type="radio" name="product-filter" value="adaptive" id="filter-adaptive" checked>
               <label for="filter-adaptive">Адаптивная</label>
             </li>
             <li class="filter-option filter-radio">
-              <input class="filter-input-radio" type="radio" name="product-filter" value="fixed" id="filter-fixed">
+              <input class="visually-hidden filter-input-radio" type="radio" name="product-filter" value="fixed" id="filter-fixed">
               <label for="filter-fixed">Фиксированная</label>
             </li>
             <li class="filter-option filter-radio">
-              <input class="filter-input-radio" type="radio" name="product-filter" value="rubber" id="filter-rubber">
+              <input class="visually-hidden filter-input-radio" type="radio" name="product-filter" value="rubber" id="filter-rubber">
               <label for="filter-rubber">Резиновая</label>
             </li>
           </ul>
@@ -85,23 +96,23 @@
           <legend>Особенности:</legend>
           <ul>
             <li class="filter-option filter-checkbox">
-              <input class="filter-input-checkbox" type="checkbox" name="features-filter" id="filter-slider" value="slider" checked>
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="features-filter" id="filter-slider" value="slider" checked>
               <label for="filter-slider">Слайдер</label>
             </li>
             <li class="filter-option filter-checkbox">
-              <input class="filter-input-checkbox" type="checkbox" name="features-filter" id="filter-advantage-box" value="advantage-box">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="features-filter" id="filter-advantage-box" value="advantage-box">
               <label for="filter-advantage-box">Преимущества</label>
             </li>
             <li class="filter-option filter-checkbox">
-              <input class="filter-input-checkbox" type="checkbox" name="features-filter" id="filter-news" value="news" checked>
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="features-filter" id="filter-news" value="news" checked>
               <label for="filter-news">Новости</label>
             </li>
             <li class="filter-option filter-checkbox">
-              <input class="filter-input-checkbox" type="checkbox" name="features-filter" id="filter-gallery" value="gallery">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="features-filter" id="filter-gallery" value="gallery">
               <label for="filter-gallery">Галерея</label>
             </li>
             <li class="filter-option filter-checkbox">
-              <input class="filter-input-checkbox" type="checkbox" name="features-filter" id="filter-consumer-basket" value="consumer-basket">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="features-filter" id="filter-consumer-basket" value="consumer-basket">
               <label for="filter-consumer-basket">Корзина</label>
             </li>
           </ul>
@@ -114,8 +125,8 @@
       <div class="sorting">
         <h3>Сортировать:</h3>
         <ul class="sorting-list">
-          <li class="sorting-item sorting-active">
-            <a href="#">По цене</a>
+          <li>
+            <a class="sorting-item sorting-item-active" href="#">По цене</a>
           </li>
           <li>
             <a class="sorting-item" href="#">По типу</a>
@@ -124,12 +135,22 @@
             <a class="sorting-item" href="#">По названию</a>
           </li>
         </ul>
-        <ul class="sorting-list">
-          <li class="sorting-item-icon sorting-active">
-            <a href="#">По убыванию</a>
+        <ul class="sorting-list-simbol">
+          <li>
+            <a class="triangle-down sorting-item sorting-item-active">
+              <span class="visually-hidden">Вниз</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                <path d="M5.5 10L0 0H11" fill="#231F20"/>
+              </svg>
+            </a>
           </li>
-          <li class="sorting-item-icon">
-            <a href="#">По возрастанию</a>
+          <li>
+            <a class="triangle-up sorting-item">
+              <span class="visually-hidden">Вверх</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                <path d="M5.5 0L0 10H11L5.5 0Z" fill="#231F20"/>
+              </svg> 
+            </a>
           </li>
         </ul>
       </div>
@@ -138,7 +159,7 @@
           <img src="img/products/product-sedona.jpg" width="359" height="578"
             alt="Информационный сайт для туристов Седона">
           <div class="catalog-item-content">
-            <h3>Sedona</h3>
+            <h3><a href="#">Sedona</a></h3>
             <p>Информационный сайт<br>для туристов</p>
             <a class="btn catalog-btn" href="#">9900</a>
           </div>
@@ -146,7 +167,7 @@
         <li class="catalog-item">
           <img src="img/products/product-pink.jpg" width="359" height="578" alt="Приложение Pink App">
           <div class="catalog-item-content">
-            <h3>Pink App</h3>
+            <h3><a href="#">Pink App</a></h3>
             <p>Продуктовый лендинг приложения для iOS и Android</p>
             <a class="btn catalog-btn" href="#">9900</a>
           </div>
@@ -154,7 +175,7 @@
         <li class="catalog-item">
           <img src="img/products/product-borodinskii.jpg" width="359" height="578" alt="Барбершоп Borodinski">
           <div class="catalog-item-content">
-            <h3>Borodinski</h3>
+            <h3><a href="#">Borodinski</a></h3>
             <p>Сайт салона красоты. Для мужчин, да.</p>
             <a class="btn catalog-btn" href="#">9900</a>
           </div>
@@ -163,7 +184,7 @@
           <img src="img/products/product-mishka.jpg" width="359" height="578"
             alt="Интернет-магазин вязаных игрушек Mishka>">
           <div class="catalog-item-content">
-            <h3>Mishka</h3>
+            <h3><a href="#">Mishka</a></h3>
             <p>Интернет-магазин вязаных игрушек</p>
             <a class="btn catalog-btn" href="#">9900</a>
           </div>
@@ -171,7 +192,7 @@
         <li class="catalog-item">
           <img src="img/products/product-aplus.jpg" width="359" height="578" alt="Курс повышения квалификации A Plus">
           <div class="catalog-item-content">
-            <h3>A Plus</h3>
+            <h3><a href="#">A Plus</a></h3>
             <p>Лендинг курсов повышения квалификации</p>
             <a class="btn catalog-btn" href="#">9900</a>
           </div>
@@ -180,26 +201,26 @@
           <img src="img/products/product-kvast.jpg" width="359" height="578"
             alt="Промо-сайт проиводителя крафтового Кваса">
           <div class="catalog-item-content">
-            <h3>Кваст</h3>
+            <h3><a href="#">Кваст</a></h3>
             <p>Промо-сайт производителя крафтового кваса</p>
             <a class="btn catalog-btn" href="#">9900</a>
           </div>
         </li>
       </ul>
       <ul class="pagination-list">
-        <li class="pagination-item">
+        <li class="pagination-item pagination-item-number pagination-item-checked">
           <a>1</a>
         </li>
-        <li class="pagination-item">
+        <li class="pagination-item pagination-item-number">
           <a href="#">2</a>
         </li>
-        <li class="pagination-item">
+        <li class="pagination-item pagination-item-number">
           <a href="#">3</a>
         </li>
-        <li class="pagination-item">
+        <li class="pagination-item pagination-item-number">
           <a href="#">4</a>
         </li>
-        <li class="pagination-item">
+        <li class="pagination-item pagination-item-switch">
           <a href="#">Следующая</a>
         </li>
       </ul>
@@ -223,17 +244,17 @@
       </section>
       <section class="footer-social">      
         <ul class="socials">
-          <li class="social-button">
-            <a href="#"><img src="#" alt="Наша страница Вконтакте"></a>
+          <li class="social-button social-button-vk">
+            <a href="#"></a>
           </li>
-          <li class="social-button">
-            <a href="#"><img src="#" alt="Наша страница в Фейсбук"></a>
+          <li class="social-button social-button-fb">
+            <a href="#"></a>
           </li>
-          <li class="social-button">
-            <a href="#"><img src="#" alt="Наша профиль в Инстаграм"></a>
+          <li class="social-button social-button-inst">
+            <a href="#"></a>
           </li>
         </ul>
-        <div>
+        <div class="footer-social-text">
           <h2>Давайте дружить, это выгодно!</h2>
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
