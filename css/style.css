@@ -506,7 +506,8 @@ opacity: 10%;
   padding-left: 0px;
   display: flex;
   width: 260px;
-  justify-content: space-between;
+  justify-content: center;
+  margin-right: 12px;
   flex-direction: row;
 }
 
