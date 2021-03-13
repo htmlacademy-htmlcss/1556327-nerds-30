@@ -907,6 +907,15 @@ color: #4D4D4D;
   text-transform: uppercase;
 }
 
+.catalog-item h3:hover {
+  color: #FB565A;
+}
+.catalog-item h3:active {
+  color: #000000;
+  opacity: 0.3;
+}
+
+
 .catalog-item {
   position: relative;
 }
